@@ -1,0 +1,26 @@
+
+<div class="row">
+  <div class="col-md-12 text-right my-1">
+    <button class="btn btn-primary "
+    routerLink="adduser"
+    >Add User</button>
+  </div>
+</div>
+
+
+<div class="row mt-3">
+  <div class="col-md-4 offset-md-2 mb-4">
+    <ul class="list-group">
+      <li class="list-group-item d-flex justify-content-between align-items-center" *ngFor="let users of usersArr">
+        {{users.userName}}
+        <button [routerLink]="['/users', users.userId]" mat-stroked-button color="primary">
+            Users Details...
+        </button>
+      </li>
+    </ul>
+  </div>
+
+  <div class="col-md-6">
+    
+  </div>
+</div>
